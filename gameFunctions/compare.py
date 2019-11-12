@@ -1,4 +1,4 @@
-from gameFunctions import gameVars
+from gameFunctions import gameVar
 
 
 # what are you trying to compare inside this function?
@@ -13,26 +13,26 @@ def comparechoices(player,computer):
 	elif player == "rock":
 		if computer == "paper":
 			print("You lose!", computer, "covers", player, "\n")
-			gameVars.player_lives = player_lives - 1
+			gameVar.player_lives = gameVar.player_lives - 1
 		else:
 			print("You win!", player, "smashes", computer, "\n")
-			gameVars.computer_lives = computer_lives - 1
+			gameVar.computer_lives = gameVar.computer_lives - 1
 
 	elif player.lower() == "paper":
 		if computer == "scissors":
 			print("You lose!", computer, "cuts", player, "\n")
-			gameVars.player_lives = player_lives - 1
+			gameVar.player_lives = gameVar.player_lives - 1
 		else:
 			print("You win!", player, "covers", computer, "\n")
-			gameVars.computer_lives = computer_lives - 1
+			gameVar.computer_lives = gameVar.computer_lives - 1
 
 	elif player.lower() == "scissors":
 		if computer == "rock":
 			print("You lose!", computer, "smashes", player, "\n")
-			gameVars.player_lives = player_lives - 1
+			gameVar.player_lives = gameVar.player_lives - 1
 		else:
 			print("You win!", player, "cuts", computer, "\n")
-			gameVars.computer_lives = computer_lives - 1
+			gameVar.computer_lives = gameVar.computer_lives - 1
 
 	else:
 		print("That's not a valid choice, try again")

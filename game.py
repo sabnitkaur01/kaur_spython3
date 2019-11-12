@@ -1,14 +1,15 @@
 # import the random package so that we can generate a random choice
 from random import randint
-from gameFunctions import winlose, gameVars
+from gameFunctions import winlose, gameVar, compare
 
-choices = ["rock", "paper","scissors"]
+choices = ["rock", "paper", "scissors"]
 computer = choices[randint (0, 2)]
-while player is False:
+while gameVar.player is False:
+
 	# set player to True
 	print("**********************************")
-	print("Computer lives: ", computer_lives, "/5\n")
-	print("Player lives: " player_lives, "/5\n")
+	print("Computer lives: ", gameVar.computer_lives, "/5\n")
+	print("Player lives: ", gameVar.player_lives, "/5\n")
 	print("Choose your weapon!\n")
 	print("**********************************")
 
@@ -19,19 +20,22 @@ while player is False:
 	print("player chose ", player, "\n")
 
 	###this is where you would call compare
-	
+	compare.comparechoices(player,computer)
 
 	### end compare stuff
 
 	# handle all lives lost for player or AI
-	if gameVars.player_lives is 0:
+	if gameVar.player_lives is 0:
 		winlose.winorlose("lost")
 
-	elif gameVars.computer_lives is 0:
+	elif gameVar.computer_lives is 0:
 		winlose.winorlose("won")
 
 	else:
 		# need to check all of our conditions after checking for a tie
-		player = False
-		computer = choices[randint(0, 2)]	
+		print("********************************")
+
+	gameVar.player = False
+	computer = choices[randint(0, 2)]	
+
 

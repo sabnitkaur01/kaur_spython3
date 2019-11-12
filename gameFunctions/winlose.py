@@ -1,5 +1,5 @@
 from random import randint
-from gameFunctions import gameVars
+from gameFunctions import gameVar
 import time
 
 # define a python function that takes an argument
@@ -20,12 +20,10 @@ def winorlose(status):
 	elif (choice is "Y") or (choice is "y"):
 		# reset the game so that we can start all over again
 		# this will break, currently - we will fix this next class
-		gameVars.player_lives = 1
-		gameVars.computer_lives = 1
-		gameVars.total_lives = 1
-		player = False
-		gameVars.computer = gameVars.choices[randint(0,2)]
-
+		gameVar.player_lives = 1
+		gameVar.computer_lives = 1
+		gameVar.total_lives = 1
+		
 	
 	else:
 		#use recursion to call winorlose until the right input :)
